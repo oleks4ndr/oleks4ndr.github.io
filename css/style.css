@@ -16,17 +16,31 @@ img {
   height: auto;
 }
 
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+  /* FONTS */
+  --FF: "Nanum Gothic", sans-serif;
+}
+
 /* || GENERAL STYLES */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font: 1.5rem "Nanum Gothic", sans-serif;
-  font-weight: 200;
+  font: 1.5rem var(--FF);
+  font-weight: 400;
 }
 
 /* - INTRO SCREEN */
+
 #intro-screen {
   position: fixed;
   top: 0;
@@ -73,4 +87,25 @@ body {
   transform: translateY(-50%);
 }
 
-/* - MAIN CONTENT */
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* .header__img {
+}
+
+header nav ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* FOOTER */
+.footer {
+  position: sticky;
+  bottom: 0;
+}
