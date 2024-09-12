@@ -9,7 +9,12 @@
     <title>30MFF Project</title>
   </head>
 
-  <body>
+  <body class="no-scroll">
+    <!-- script to disable scrolling until intro animation finishes -->
+    <script>
+      setTimeout(() => document.body.classList.remove("no-scroll"), 4000);
+    </script>
+
     <!-- HEADER // TOP BAR -->
     <header class="header">
       <img
@@ -38,18 +43,121 @@
     <main id="main" class="main">
       <!-- SECTION 1: VIDEO -->
       <section id="home" class="main__section">
-        <!-- <video src=""></video> -->
-        <h2></h2>
+        <!-- <video width="320" height="240" controls>
+          <source
+            src="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+            type="video/mp4"
+          />
+        </video> -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=-0WrqlaBCGgcu-rj"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          >video here</iframe
+        >
+        <h2>Title of Video</h2>
+        <aside class="about__video">
+          <details>
+            <summary>About the Video</summary>
+            <p class="about__video-answer">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              explicabo non repellendus corporis mollitia esse facere architecto
+              nemo, enim possimus, fugiat inventore fugit illum molestiae ad?
+              Ipsa alias minima itaque.
+            </p>
+          </details>
+        </aside>
       </section>
 
       <!-- SECTION 2: ABOUT -->
       <section id="about" class="main__section">
-        <div class="author"></div>
-        <div class="author"></div>
+        <div class="author">
+          <img
+            src="img/author_pic.jpg"
+            alt="Author Picture"
+            width="163"
+            height="163"
+          />
+          <h2>Author One</h2>
+          <p>
+            about author one Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Consequatur ducimus laudantium architecto illo exercitationem
+            mollitia fuga unde optio sint? In eum ea accusamus minima autem
+            adipisci aliquam, rem fugit nisi?
+          </p>
+        </div>
+        <div class="author">
+          <img
+            src="img/author_pic.jpg"
+            alt="Author Picture"
+            width="163"
+            height="163"
+          />
+          <h2>Author Two</h2>
+          <p>
+            about author two Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Consequatur ducimus laudantium architecto illo exercitationem
+            mollitia fuga unde optio sint? In eum ea accusamus minima autem
+            adipisci aliquam, rem fugit nisi?
+          </p>
+        </div>
       </section>
 
       <!-- SECTION 3: CONTACT -->
-      <section id="contact" class="main__section"></section>
+      <section id="contact" class="main__section">
+        <h2 class="contact__heading">Contact Us!</h2>
+        <form
+          action="https://httpbin.org/get"
+          method="get"
+          class="contact__form"
+        >
+          <fieldset class="contact__fieldset">
+            <legend class="offscreen">Send Us A Message</legend>
+            <p class="contact__p">
+              <label class="contact__label" for="name">Name:</label>
+              <input
+                class="contact__input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="your name"
+                required
+              />
+            </p>
+            <p class="contact__p">
+              <label class="contact__label" for="email">Email:</label>
+              <input
+                class="contact__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="your email"
+                required
+              />
+            </p>
+            <p class="contact__p">
+              <label class="contact__label" for="message">Your Message:</label>
+              <br />
+              <textarea
+                class="contact__textarea"
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Type your message here"
+              ></textarea>
+            </p>
+          </fieldset>
+          <button class="contact__button" type="submit">Send</button>
+          <button class="contact__button" type="reset">Reset</button>
+        </form>
+      </section>
+      <div class="back2top">back to top</div>
     </main>
 
     <!-- FOOTER -->

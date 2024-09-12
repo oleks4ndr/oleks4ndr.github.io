@@ -25,15 +25,18 @@ textarea {
 :root {
   /* FONTS */
   --FF: "Nanum Gothic", sans-serif;
-  --FS: clamp(1rem, 2.2vh, 1.5rem);
+  --FS: clamp(0.5rem, 2.2vh, 2rem);
 
   /* COLORS */
   --INTRO-BG: #333;
-  --BGCOLOR: rgb(250, 245, 255);
-  --HEADER-BG: rgb(231, 224, 238);
-  --SECTION-BG: rgba(220, 230, 240, 0.5);
 
-  --BORDER-COLOR: rgb(214, 210, 255);
+  --BGCOLOR: #fbfbf2;
+  --HEADER-BG: #cfd2cd;
+  --SECTION-BG: #e5e6e4;
+  --BORDER-COLOR: #a6a2a2;
+  --TEXT-COLOR: #473f40;
+
+  /* --BORDER-COLOR: rgb(214, 210, 255); */
 
   --LINK-COLOR: rgb(51, 51, 51);
   --LINK-HOVER: rgba(51, 51, 51, 0.8);
@@ -63,6 +66,11 @@ textarea {
   }
 } */
 
+/* || UTILITY CLASSES */
+.no-scroll {
+  overflow: hidden;
+}
+
 /* || GENERAL STYLES */
 
 html {
@@ -74,6 +82,10 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  /* display: grid;
+  grid-template-rows: 1fr 8fr 15px; */
+  color: var(--TEXT-COLOR);
+
   font-weight: 400;
   height: 100vh;
 }
@@ -90,6 +102,12 @@ a:focus-visible {
 
 a:active {
   color: var(--LINK-ACTIVE);
+}
+
+#home,
+#about,
+#contact {
+  scroll-margin-top: 13vh;
 }
 
 /* || SPLASH SCREEN */
@@ -127,7 +145,9 @@ a:active {
 /* || HEADER */
 
 .header {
+  /* grid-area: header; */
   background-color: var(--HEADER-BG);
+  /* grid-row: 1; */
   /* margin: 0 var(--MARGIN-SIDE); */
   position: fixed;
   width: 100%;
@@ -162,23 +182,34 @@ a:active {
 }
 
 .main {
+  position: relative;
   margin-top: 5rem;
+  width: 100%;
 }
 /* || SECTION STYLE */
 .main__section {
   margin: var(--MARGIN) var(--MARGIN-SIDE);
   background-color: var(--SECTION-BG);
   border-radius: 20px;
-  height: 80vh;
+  height: 83vh;
   padding: var(--PADDING);
+}
+
+.back2top {
+  height: 400px;
 }
 
 /* || FOOTER */
 .footer {
   background-color: var(--BGCOLOR);
   position: fixed;
+  height: fit-content;
   bottom: 0;
   width: 100%;
-  text-align: center;
-  padding: var(--PADDING);
+  text-align: start;
+  padding: 0.2rem var(--MARGIN-SIDE);
+}
+
+.footer p {
+  font-size: 0.8rem;
 }
