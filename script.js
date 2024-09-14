@@ -1,11 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const introScreen = document.getElementById("intro-screen");
-
-//   introScreen.addEventListener("click", function () {
-//     document.body.classList.add("intro-hidden");
-//   });
-// });
-
+// Intro Splash Screen Animation
 let intro = document.querySelector(".intro");
 let introImg = document.querySelector(".intro__image");
 

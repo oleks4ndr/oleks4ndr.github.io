@@ -195,6 +195,10 @@ a:active {
   padding: var(--PADDING);
 }
 
+#home {
+  padding: var(--PADDING) var(--PADDING-SIDE);
+}
+
 .back2top {
   height: 400px;
 }
