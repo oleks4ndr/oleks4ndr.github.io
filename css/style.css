@@ -149,7 +149,7 @@ a:active {
   background-color: var(--HEADER-BG);
   /* grid-row: 1; */
   /* margin: 0 var(--MARGIN-SIDE); */
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   z-index: 1;
@@ -183,6 +183,7 @@ a:active {
 
 .main {
   position: relative;
+  overflow: clip;
   margin-top: 5rem;
   width: 100%;
 }
@@ -196,7 +197,28 @@ a:active {
 }
 
 #home {
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  align-items: center;
+  gap: 50px;
   padding: var(--PADDING) var(--PADDING-SIDE);
+}
+
+.home__video-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.home__video {
+  width: 100%;
+}
+
+.home__about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .back2top {
