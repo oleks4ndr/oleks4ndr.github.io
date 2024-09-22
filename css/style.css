@@ -25,16 +25,20 @@ textarea {
 :root {
   /* FONTS */
   --FF: "Nanum Gothic", sans-serif;
-  --FS: clamp(0.5rem, 2.2vh, 2rem);
+  --FS: 1.5rem;
 
   /* COLORS */
-  --INTRO-BG: #333;
+  --INTRO-BG: #d1bb9e;
 
   --BGCOLOR: #fbfbf2;
-  --HEADER-BG: #cfd2cd;
-  --SECTION-BG: #e5e6e4;
+  --HEADER-BG: #d1bb9e;
+  /* --HEADER-BG: #a79277; */
+  --SECTION-BG: #ead8c0;
   --BORDER-COLOR: #a6a2a2;
   --TEXT-COLOR: #473f40;
+
+  --BUTTON-COLOR: #656762;
+  --BUTTON-ACTIVE: #38402c;
 
   /* --BORDER-COLOR: rgb(214, 210, 255); */
 
@@ -85,9 +89,10 @@ body {
   /* display: grid;
   grid-template-rows: 1fr 8fr 15px; */
   color: var(--TEXT-COLOR);
-
+  background-image: url(../img/background.png);
+  background-size: cover;
+  /* background-repeat: repeat-y; */
   font-weight: 400;
-  height: 100vh;
 }
 
 a:any-link {
@@ -149,7 +154,7 @@ a:active {
   background-color: var(--HEADER-BG);
   /* grid-row: 1; */
   /* margin: 0 var(--MARGIN-SIDE); */
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 1;
@@ -167,11 +172,12 @@ a:active {
 
 .header__h1 {
   font-size: 2.8rem;
-  font-weight: 100;
+  font-weight: 500;
 }
-
-/* .header__nav {
-  display: inline-flex;
+/* 
+.header__nav {
+  border-radius: 5px;
+  background-color: aqua;
 } */
 
 .header__ul {
@@ -183,7 +189,6 @@ a:active {
 
 .main {
   position: relative;
-  overflow: clip;
   margin-top: 5rem;
   width: 100%;
 }
@@ -200,8 +205,9 @@ a:active {
   display: grid;
   grid-template-columns: 50% 30% 20%;
   align-items: center;
-  gap: 50px;
+  /* gap: 50px; */
   padding: var(--PADDING) var(--PADDING-SIDE);
+  max-width: 100%;
 }
 
 .home__video-container {
@@ -212,17 +218,141 @@ a:active {
 
 .home__video {
   width: 100%;
+  border-radius: 15px;
 }
 
 .home__about-container {
+  /* padding-top: 8rem; */
+  width: 100%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  padding: var(--PADDING) var(--PADDING-SIDE);
+  /* justify-content: space-around; */
 }
 
+.home__about-title {
+  font-size: 4rem;
+}
+
+.home__cats-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.home__cats-container p {
+  text-align: center;
+}
+
+.home__cats-img {
+  width: 100%;
+}
+/* || ABOUT SECTION */
+
+#about {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  align-items: center;
+}
+
+.about__h2 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.author {
+}
+
+/* || CONTACT SECTION */
+
+#contact {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  align-items: center;
+}
+
+.contact__heading {
+  text-align: center;
+  font-size: 4rem;
+}
+.contact__form {
+  max-width: 1000px;
+  margin: auto; /* Center the form horizontally */
+  padding: 20px;
+  background-color: var(--SECTION-BG); /* Light gray background */
+  border-radius: 5px;
+}
+
+/* Remove default fieldset styles */
+.contact__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the form paragraphs */
+.contact__p {
+  margin-bottom: 15px;
+}
+
+/* Style the labels */
+.contact__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: lighter;
+  color: #333;
+}
+
+/* Style the input fields */
+.contact__input,
+.contact__textarea {
+  width: 100%; /* Full width */
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.contact__textarea {
+  resize: none;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Style the buttons */
+.contact__button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: var(--BUTTON-COLOR);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact__button:last-child {
+  margin-right: 0; /* Remove right margin from the last button */
+}
+
+.contact__button:hover {
+  background-color: var(--BUTTON-ACTIVE); /* Darker blue on hover */
+}
+/* || END OF PAGE */
 .back2top {
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }
 
 /* || FOOTER */
