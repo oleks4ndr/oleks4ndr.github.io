@@ -33,7 +33,7 @@ textarea {
   --BGCOLOR: #fbfbf2;
   --HEADER-BG: #d1bb9e;
   /* --HEADER-BG: #a79277; */
-  --SECTION-BG: #ead8c0;
+  --SECTION-BG: #ead8c0e6;
   --BORDER-COLOR: #a6a2a2;
   --TEXT-COLOR: #473f40;
 
@@ -86,8 +86,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  /* display: grid;
-  grid-template-rows: 1fr 8fr 15px; */
+
   color: var(--TEXT-COLOR);
   background-image: url(../img/background.png);
   background-size: cover;
@@ -172,7 +171,7 @@ a:active {
 
 .header__h1 {
   font-size: 2.8rem;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 /* 
 .header__nav {
@@ -264,7 +263,26 @@ a:active {
   font-size: 4rem;
 }
 
+.about__author-container {
+  display: flex;
+  justify-content: space-around;
+}
 .author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--PADDING-SIDE);
+}
+
+.author img {
+  min-width: 300px;
+  border-radius: 50%;
+  padding: var(--PADDING);
+}
+
+.author h3 {
+  font-size: 2rem;
+  padding: var(--PADDING);
 }
 
 /* || CONTACT SECTION */
@@ -281,40 +299,39 @@ a:active {
 }
 .contact__form {
   max-width: 1000px;
-  margin: auto; /* Center the form horizontally */
+  margin: auto; /* center the form horizontally */
   padding: 20px;
-  background-color: var(--SECTION-BG); /* Light gray background */
+  background-color: var(--SECTION-BG);
   border-radius: 5px;
 }
 
-/* Remove default fieldset styles */
+/* reset default fieldset styles */
 .contact__fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-/* Style the form paragraphs */
 .contact__p {
   margin-bottom: 15px;
 }
 
-/* Style the labels */
+/* style the labels */
 .contact__label {
   display: block;
   margin-bottom: 5px;
   font-weight: lighter;
-  color: #333;
+  color: var(--TEXT-COLOR);
 }
 
-/* Style the input fields */
+/* input fields */
 .contact__input,
 .contact__textarea {
-  width: 100%; /* Full width */
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ccc; /* Light gray border */
+  border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding doesn't affect total width */
+  box-sizing: border-box;
   font-size: 16px;
   font-family: inherit;
 }
@@ -328,7 +345,7 @@ a:active {
   left: -9999px;
 }
 
-/* Style the buttons */
+/* buttons */
 .contact__button {
   padding: 10px 20px;
   margin-top: 10px;
@@ -342,11 +359,11 @@ a:active {
 }
 
 .contact__button:last-child {
-  margin-right: 0; /* Remove right margin from the last button */
+  margin-right: 0;
 }
 
 .contact__button:hover {
-  background-color: var(--BUTTON-ACTIVE); /* Darker blue on hover */
+  background-color: var(--BUTTON-ACTIVE);
 }
 /* || END OF PAGE */
 .back2top {

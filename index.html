@@ -17,13 +17,15 @@
 
     <!-- HEADER // TOP BAR -->
     <header class="header">
-      <img
-        class="header__img"
-        src="img/cat_logo.png"
-        alt="Logo for the website"
-        width="600"
-        height="503"
-      />
+      <a href="#home">
+        <img
+          class="header__img"
+          src="img/cat_logo.png"
+          alt="Logo for the website"
+          width="600"
+          height="503"
+        />
+      </a>
       <h1 class="header__h1">30MFF Project</h1>
       <nav class="header__nav">
         <ul class="header__ul">
@@ -85,35 +87,38 @@
       <!-- SECTION 2: ABOUT -->
       <section id="about" class="main__section">
         <h2 class="about__h2">About Us!</h2>
-        <div class="author">
-          <img
-            src="img/author_pic.jpg"
-            alt="Author Picture"
-            width="163"
-            height="163"
-          />
-          <h2>Author One</h2>
-          <p>
-            about author one Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit. Consequatur ducimus laudantium architecto illo exercitationem
-            mollitia fuga unde optio sint? In eum ea accusamus minima autem
-            adipisci aliquam, rem fugit nisi?
-          </p>
-        </div>
-        <div class="author">
-          <img
-            src="img/author_pic.jpg"
-            alt="Author Picture"
-            width="163"
-            height="163"
-          />
-          <h2>Author Two</h2>
-          <p>
-            about author two Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit. Consequatur ducimus laudantium architecto illo exercitationem
-            mollitia fuga unde optio sint? In eum ea accusamus minima autem
-            adipisci aliquam, rem fugit nisi?
-          </p>
+        <div class="about__author-container">
+          <div class="author">
+            <img
+              src="img/author_pic.jpg"
+              alt="Author Picture"
+              width="163"
+              height="163"
+            />
+            <h3>Oleksandr Anyshchenko</h3>
+            <p>
+              A second-year university student at New York University Abu Dhabi,
+              majoring in Computer Science with a minor in Interactive Media.
+              Passionate about exploring a variety of opportunities, from
+              design, to computational challenges, to mechanical tributes, eager
+              to try it all!
+            </p>
+          </div>
+          <div class="author">
+            <img
+              src="img/author_pic.jpg"
+              alt="Author Picture"
+              width="163"
+              height="163"
+            />
+            <h3>Sabrina Song</h3>
+            <p>
+              about author two Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Consequatur ducimus laudantium architecto illo
+              exercitationem mollitia fuga unde optio sint? In eum ea accusamus
+              minima autem adipisci aliquam, rem fugit nisi?
+            </p>
+          </div>
         </div>
       </section>
 
@@ -165,10 +170,11 @@
                 ></textarea>
               </p>
             </fieldset>
-            <button class="contact__button" type="submit">Send</button>
+            <button class="contact__button" id="submitButton" type="submit">
+              Send
+            </button>
             <button class="contact__button" type="reset">Reset</button>
           </form>
-        </div>
 
         <div class="contact__photos"></div>
       </section>
