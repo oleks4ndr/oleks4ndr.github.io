@@ -28,7 +28,7 @@ textarea {
   --FS: 1.5rem;
 
   /* COLORS */
-  --INTRO-BG: #d1bb9e;
+  --INTRO-BG: #a79277;
 
   --BGCOLOR: #fbfbf2;
   --HEADER-BG: #d1bb9e;
@@ -198,6 +198,7 @@ a:active {
   border-radius: 20px;
   height: 83vh;
   padding: var(--PADDING);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.072);
 }
 
 #home {
@@ -365,6 +366,22 @@ a:active {
 .contact__button:hover {
   background-color: var(--BUTTON-ACTIVE);
 }
+
+.popup-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: none; /* hidden by default */
+}
+
 /* || END OF PAGE */
 .back2top {
   display: flex;
