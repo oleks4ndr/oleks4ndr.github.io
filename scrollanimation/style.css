@@ -44,6 +44,7 @@ body {
 }
 
 .title h1 {
+  -webkit-text-stroke: whitesmoke 2px;
   font-weight: 700;
   color: rgb(30, 25, 30);
   padding: 1rem;
@@ -123,6 +124,7 @@ body {
 }
 
 /* COMIC TEXT STYLING */
+
 .comic-text-even {
   padding: 8px;
   border: solid 2px #333;
@@ -141,6 +143,12 @@ body {
   max-width: 350px;
   position: absolute;
   left: 4rem;
+}
+
+.bang {
+  color: red;
+  font-size: 1.1rem;
+  font-weight: 1000;
 }
 
 /* LAST SLIDE // OUTRO */
