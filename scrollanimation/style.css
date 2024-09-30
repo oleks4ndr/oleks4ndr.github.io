@@ -29,6 +29,7 @@ body {
   font-style: normal;
   color: rgb(30, 25, 30);
   background-color: #303948;
+  max-width: 100%;
 }
 
 /* || TITLE/INTRO SCREEN STYLES */
