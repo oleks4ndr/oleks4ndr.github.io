@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Oleksandr Anyshchenko" />
-    <link rel="stylesheet" href="style.css" />
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JQUERY -->
     <script src="jquery-3.7.1.min.js"></script>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
 
     <title>A Loud Morning</title>
   </head>
@@ -25,10 +27,10 @@
           src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png"
         />
       </div>
-      <p></p>
     </div>
+    <!-- SLIDE 1 -->
     <div class="slide-even">
-      <div class="comic">
+      <div class="comic" data-aos="fade-right">
         <img
           src="img/img1.webp"
           alt="boy sleeping image"
@@ -36,8 +38,104 @@
           height="1024"
         />
       </div>
+      <!-- TEXT -->
+      <div class="comic-text-even" data-aos="fade-left">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A error id
+          beatae maiores in. Voluptas quis expedita nostrum animi officiis
+          itaque reprehenderit, asperiores vero velit et, nam quaerat nesciunt
+          unde.
+        </p>
+      </div>
     </div>
-    <div class="slide-odd">2</div>
-    <div class="slide-even">3</div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide-odd">
+      <div class="comic" data-aos="fade-left">
+        <img
+          src="img/img2.webp"
+          alt="boy disturbed image"
+          width="1792"
+          height="1024"
+        />
+      </div>
+      <!-- TEXT -->
+      <div class="comic-text-odd" data-aos="fade-right">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A error id
+          beatae maiores in. Voluptas quis expedita nostrum animi officiis
+          itaque reprehenderit, asperiores vero velit et, nam quaerat nesciunt
+          unde.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide-even">
+      <div class="comic" data-aos="zoom-in-right">
+        <img
+          src="img/img3.webp"
+          alt="boys walking down image"
+          width="1792"
+          height="1024"
+        />
+      </div>
+      <!-- TEXT -->
+      <div class="comic-text-even" data-aos="fade-left">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A error id
+          beatae maiores in. Voluptas quis expedita nostrum animi officiis
+          itaque reprehenderit, asperiores vero velit et, nam quaerat nesciunt
+          unde.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide-odd">
+      <!-- IMAGE -->
+      <div class="comic" data-aos="fade-left">
+        <img
+          src="img/img4.webp"
+          alt="boys walking down image"
+          width="1792"
+          height="1024"
+        />
+      </div>
+      <!-- TEXT -->
+      <div class="comic-text-odd" data-aos="fade-right">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A error id
+          beatae maiores in. Voluptas quis expedita nostrum animi officiis
+          itaque reprehenderit, asperiores vero velit et, nam quaerat nesciunt
+          unde.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide-even">
+      <!-- IMAGE -->
+      <div class="comic" data-aos="fade-right">
+        <img
+          src="img/img5.webp"
+          alt="boys walking down image"
+          width="1792"
+          height="1024"
+        />
+      </div>
+      <!-- TEXT -->
+      <div class="comic-text-even" data-aos="fade-left">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A error id
+          beatae maiores in. Voluptas quis expedita nostrum animi officiis
+          itaque reprehenderit, asperiores vero velit et, nam quaerat nesciunt
+          unde.
+        </p>
+      </div>
+    </div>
+    <div class="slide-last">
+      <h2 data-aos="fade-up">The End</h2>
+    </div>
   </body>
 </html>

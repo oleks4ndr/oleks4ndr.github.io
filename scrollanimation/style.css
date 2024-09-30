@@ -44,6 +44,7 @@ body {
 }
 
 .title h1 {
+  font-weight: 700;
   color: rgb(30, 25, 30);
   padding: 1rem;
   font-size: 5rem;
@@ -110,10 +111,53 @@ body {
 
 /* COMIC IMAGE STYLING */
 .comic {
+  border: solid 2px #333;
   max-width: 1200px;
-  background-color: gray;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px #303948;
 }
 
 .comic img {
-  scale: 60%;
+  border: solid 2px #333;
+  scale: 90%;
+}
+
+/* COMIC TEXT STYLING */
+.comic-text-even {
+  padding: 8px;
+  border: solid 2px #333;
+  background: whitesmoke;
+  display: block;
+  max-width: 350px;
+  position: absolute;
+  right: 4rem;
+}
+
+.comic-text-odd {
+  padding: 8px;
+  border: solid 2px #333;
+  background: whitesmoke;
+  display: block;
+  max-width: 350px;
+  position: absolute;
+  left: 4rem;
+}
+
+/* LAST SLIDE // OUTRO */
+.slide-last {
+  height: 100vh;
+  background: linear-gradient(#303948, rgba(0, 0, 0, 0), #303948),
+    url(img/title_bg1_5184x3456.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.slide-last h2 {
+  padding: 3rem;
+  border: solid 2px #333;
+  background: whitesmoke;
+  size: 3rem;
 }
