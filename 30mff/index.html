@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Oleksandr Anyshchenko" />
+    <meta name="description" content="First website for CommLabs @ NYUAD" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>30MFF Project</title>
+  </head>
+
+  <body class="no-scroll">
+    <!-- script to disable scrolling until intro animation finishes -->
+    <script>
+      setTimeout(() => document.body.classList.remove("no-scroll"), 4000);
+    </script>
+
+    <!-- HEADER // TOP BAR -->
+    <header class="header">
+      <a href="#home">
+        <img
+          class="header__img"
+          src="img/cat_logo.png"
+          alt="Logo for the website"
+          width="600"
+          height="503"
+        />
+      </a>
+      <h1 class="header__h1">30MFF Project</h1>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- SPLASH SCREEN -->
+    <div class="intro">
+      <img class="intro__image" src="img/cat_logo.png" alt="Intro Image" />
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main" class="main">
+      <!-- SECTION 1: VIDEO -->
+      <section id="home" class="main__section">
+        <div class="home__video-container">
+          <iframe
+            class="home__video"
+            width="1200"
+            height="675"
+            src="https://www.youtube.com/embed/uMVcBybpYKM?si=Vn3xfl3aZgX4SnJO"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="home__about-container">
+          <h2 class="home__about-title">Meow!</h2>
+          <aside class="about__video">
+            <details>
+              <summary>About the Video</summary>
+              <p class="about__video-answer">
+                Meow!, was a short rough film, created by Oleksandr Anyshchenko
+                and Sabrina Song. When tasked with the challenging task of
+                creating a short film in just the time span of 30-minutes,
+                campus cats came to the minds of these two...
+              </p>
+            </details>
+          </aside>
+        </div>
+        <div class="home__cats-container">
+          <a href="/cats.pdf" download="cats.pdf">
+            <img
+              class="home__cats-img"
+              src="img/more_cats.png"
+              alt="Camputs Cats List Document Button"
+              width="649"
+              height="800"
+            />
+            <p>learn about all the cats on campus!</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 2: ABOUT -->
+      <section id="about" class="main__section">
+        <h2 class="about__h2">About Us!</h2>
+        <div class="about__author-container">
+          <div class="author">
+            <img
+              src="img/author1.jpeg"
+              alt="Author Picture"
+              width="163"
+              height="163"
+            />
+            <h3>Oleksandr Anyshchenko</h3>
+            <p>
+              A second-year university student at New York University Abu Dhabi,
+              majoring in Computer Science with a minor in Interactive Media.
+              Passionate about exploring a variety of opportunities, from
+              design, to computational challenges, to mechanical tributes, eager
+              to try it all!
+            </p>
+          </div>
+          <div class="author">
+            <img
+              src="img/author2.png"
+              alt="Author Picture"
+              width="163"
+              height="163"
+            />
+            <h3>Sabrina Song</h3>
+            <p>
+              An NYU university student majoring in Interactive Media Arts.
+              Likes and protect animals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: CONTACT -->
+      <section id="contact" class="main__section">
+        <h2 class="contact__heading">Contact Us!</h2>
+
+        <div class="contact__container">
+          <form
+            action="https://httpbin.org/get"
+            method="get"
+            class="contact__form"
+          >
+            <fieldset class="contact__fieldset">
+              <legend class="offscreen">Send Us A Message</legend>
+              <p class="contact__p">
+                <label class="contact__label" for="name">Name:</label>
+                <input
+                  class="contact__input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </p>
+              <p class="contact__p">
+                <label class="contact__label" for="email">Email:</label>
+                <input
+                  class="contact__input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </p>
+              <p class="contact__p">
+                <label class="contact__label" for="message"
+                  >Your Message:</label
+                >
+                <textarea
+                  class="contact__textarea"
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Type your message here"
+                ></textarea>
+              </p>
+            </fieldset>
+            <button class="contact__button" id="submitButton" type="submit">
+              Send
+            </button>
+            <button class="contact__button" type="reset">Reset</button>
+          </form>
+        </div>
+        <!-- Popup message -->
+        <div id="popupMessage" class="popup-message" style="display: none">
+          This is under construction :)
+        </div>
+        <script>
+          document
+            .getElementById("submitButton")
+            .addEventListener("click", function (event) {
+              event.preventDefault(); // Prevent form submission
+
+              // Show the popup message
+              var popup = document.getElementById("popupMessage");
+              popup.style.display = "block"; // Make it visible
+
+              // Hide the message after 3 seconds (3000 milliseconds)
+              setTimeout(function () {
+                popup.style.display = "none"; // Hide the popup
+              }, 3000);
+
+              // Optionally, reset the form fields
+              document.querySelector(".contact__form").reset();
+            });
+        </script>
+        <div class="contact__photos"></div>
+      </section>
+      <div class="back2top">
+        <a href="#home">⬆️ back to top! ⬆️</a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; Oleksandr Anyshchenko</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
