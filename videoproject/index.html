@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="authors"
+      content="Tiffany Rakotonirina, Sihyun Kim, Oleksandr Anyshchenko"
+    />
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>The Laundry Chronicles</title>
+  </head>
+
+  <body>
+    <!-- main content -->
+    <main class="main">
+      <div class="main__title">
+        <h1 class="main__h1" data-aos="fade-up">The Laundry Chronicles</h1>
+        <h3 class="main__h3" data-aos="fade-down">
+          Tiffany Rakotonirina, Sihyun Kim, Oleksandr Anyshchenko
+        </h3>
+      </div>
+      <!-- images to all coverge to the center as you scroll down -->
+      <img src="img/pants.png" alt="pants image" id="pants" />
+      <img src="img/shorts.png" alt="shorts image" id="shorts" />
+      <img src="img/socks.png" alt="sock1 image" id="sock1" />
+      <img src="img/socks.png" alt="sock2 image" id="sock2" />
+      <img src="img/tshirt1.png" alt="tshirt image" id="tshirt" />
+
+      <div class="main__video-section" data-aos="fade-up">
+        <div class="main__video-container">
+          <!-- insert embedded video link -->
+          <img
+            src="img/machine.png"
+            alt="machine image"
+            class="main__machine-img"
+          />
+          <img src="img/light.png" alt="light image" class="main__light-img" />
+          <p class="main__video-text" data-aos="fade-right">
+            it's that time again?
+          </p>
+
+          <iframe
+            class="main__video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/80F5pyB4jMI?si=83K10b6vGbZcsfek"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="main__bloopers" data-aos="fade-up">
+        <iframe
+          class="main__bloopers-video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/r7r6uYkZ9x4?si=1xUSZYmkH-hYKlUP"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+        <div class="main__bloopers-about">
+          <h3 class="main__bloopers-heading">Check Out The Bloopers!</h3>
+          <h4 class="main__bloopers-abouth4">About The Production:</h4>
+          <p class="main__bloopers-about-text">
+            The production of Laundry Lost and Found was a collaborative effort
+            that brought a humorous and relatable story to life. Shot in a dorm
+            laundry room and hallway, the team worked to capture the
+            protagonist’s emotional journey through natural settings and dynamic
+            cinematography. While challenges like tight spaces and continuity
+            arose, teamwork and creativity made the process both rewarding and
+            fun—resulting in a film as entertaining as the bloopers created
+            along the way.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <img
+        src="img/smellysocks.png"
+        alt="smellysocks img"
+        class="smellysocks"
+      />
+      <p class="extra-text">
+        treat others how you want yourself to be treated :)
+      </p>
+    </footer>
+
+    <!-- link scripts to webpage after dom loaded -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
