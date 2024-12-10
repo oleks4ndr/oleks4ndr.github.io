@@ -3,16 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="author" content="Oleksandr Anyshchenko" />
+    <meta
+      name="description"
+      content="Oleksandr Anyshchenko is a computer scientist ////////////////////"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Oleksandr Anyshchenko</title>
   </head>
   <body>
-    <h1>MAIN DIRECTORY FOR ALEKS4NDRR</h1>
-    <nav>
-      <ul>
-        <li><a href="/30mff/index.html">30 MINUTE FILM FESTIVAL</a></li>
-        <li><a href="/week5/index.html">SVG IMAGE</a></li>
-        <li><a href="/scrollanimation/index.html">SCROLL ANIMATION</a></li>
-      </ul>
-    </nav>
+    <header class="header">
+      <a href="#home" class="header__logo">
+        <img
+          src="assets/img/logo_main.png"
+          alt="Main Logo"
+          height="500"
+          width="500"
+        />
+      </a>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li>
+            <a
+              href="https://github.com/aleks4ndrr/"
+              target="_blank"
+              class="nav__link"
+              ><img
+                src="assets/img/github-mark.png"
+                alt="Github Logo Hyperlink"
+                height="240"
+                width="240"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/oleksandr-anyshchenko-801469278/"
+              target="_blank"
+              ><img
+                src="assets/img/LI-In-Bug.png"
+                alt="Github Logo Hyperlink"
+                height="635"
+                width="540"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- home section -->
+      <section class="main__home" id="home">
+        <div class="wave-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 320"
+            preserveAspectRatio="none"
+          >
+            <path
+              id="wave"
+              fill="#d9d9d9"
+              fill-opacity="0.6"
+              d="M0,96L34.3,90.7C68.6,85,137,75,206,106.7C274.3,139,343,213,411,234.7C480,256,549,224,617,192C685.7,160,754,128,823,138.7C891.4,149,960,203,1029,229.3C1097.1,256,1166,256,1234,229.3C1302.9,203,1371,149,1406,122.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+            ></path>
+            <path
+              id="wave1"
+              fill="#d9d9d9"
+              fill-opacity="0.4"
+              d="M0,160L34.3,181.3C68.6,203,137,245,206,245.3C274.3,245,343,203,411,186.7C480,171,549,181,617,208C685.7,235,754,277,823,256C891.4,235,960,149,1029,101.3C1097.1,53,1166,43,1234,42.7C1302.9,43,1371,53,1406,58.7L1440,64L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <h1 class="home__name-text">
+          Hi, I am <br />
+          <b class="name">Oleksandr Anyshchenko</b>
+        </h1>
+        <!-- <img
+          src="https://fakeimg.pl/800x600"
+          alt="Background Image"
+          class="home__image"
+        /> -->
+
+        <h1 class="home__name-text2">
+          a Computer Scientist, with a creative and innovative outlook.
+        </h1>
+        <div class="line"></div>
+        <!-- <div class="wavy"></div> -->
+      </section>
+
+      <!-- projects section -->
+      <section id="projects" class="main__projects">
+        <h2 class="projects__header">Projects</h2>
+        <div class="projects__container">
+          <div id="project-tile" class="project1">as</div>
+          <div id="project-tile" class="project2">as</div>
+          <div id="project-tile" class="project3">as</div>
+          <div id="project-tile" class="project4">as</div>
+        </div>
+      </section>
+
+      <!-- experience section -->
+      <section id="experience" class="main__experience">
+        <h2 class="experience__header">Experience</h2>
+        <div class="experience__container">
+          <div class="experience-tile">experience 1</div>
+          <div class="experience-tile">experience 1</div>
+          <div class="experience-tile">experience 1</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
   </body>
+  <script src="assets/js/main.js" defer></script>
 </html>
