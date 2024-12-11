@@ -9,6 +9,9 @@
       content="Oleksandr Anyshchenko is a computer scientist ////////////////////"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Oleksandr Anyshchenko</title>
   </head>
   <body>
@@ -53,15 +56,18 @@
           </li>
         </ul>
       </nav>
+      <!-- TESTING HAMBURGER -->
       <label>
         <input type="checkbox" />
         <span class="menu"> <span class="hamburger"></span> </span>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="hamburger-list">
+          <li><a href="#home">Home.</a></li>
+          <li><a href="#projects">Projects.</a></li>
+          <li><a href="#experience">Experience.</a></li>
+          <li><a href="#">Contact.</a></li>
         </ul>
       </label>
+      <!-- sss -->
     </header>
 
     <main class="main">
@@ -87,7 +93,7 @@
             ></path>
           </svg>
         </div>
-        <h1 class="home__header1">
+        <h1 data-aos="fade-left" class="home__header1">
           Hi, I am <br />
           <span class="name">Oleksandr Anyshchenko</span>
         </h1>
@@ -99,7 +105,7 @@
 
         <h2 class="home__header2">Web & Software Developer</h2>
         <h2 class="home__header2-loc">Abu Dhabi, United Arab Emirates</h2>
-        <div class="line"></div>
+        <!-- <div class="line"></div> -->
         <img src="/assets/img/line.png" alt="line" class="line-img" />
         <!-- <div class="wavy"></div> -->
       </section>
@@ -109,12 +115,23 @@
         <h2 class="projects__header">Projects</h2>
         <div class="projects__container">
           <div id="project-tile" class="project1">
-            <h3 class="project__header">Interactive Comic</h3>
+            <h3 class="project__header">30-Minute-Film-Festival</h3>
           </div>
-          <div id="project-tile" class="project2">as</div>
-          <div id="project-tile" class="project3">as</div>
-          <div id="project-tile" class="project4">as</div>
+          <div id="project-tile" class="project2">
+            <h3 class="project__header">Alienation - Interactive Comic</h3>
+          </div>
+          <div id="project-tile" class="project3">
+            <h3 class="project__header">
+              A Call From The Future - Audio Experience
+            </h3>
+          </div>
+          <div id="project-tile" class="project4">
+            <h3 class="project__header">
+              The Laundry Chronicles - Video Experience
+            </h3>
+          </div>
         </div>
+        <img src="/assets/img/line.png" alt="line" class="line-img2" />
       </section>
 
       <!-- experience section -->
@@ -135,20 +152,32 @@
           </div>
           <div id="experience-tile">
             <img
-              src="https://fakeimg.pl/300x300"
+              src="/assets/img/qsiblogo.JPG"
               alt="Experience Logo"
               class="experience__img"
             />
             <h3 class="experience__header">Summer Camp Music Teacher</h3>
-            <p class="experience__date">Month YYYY -- Month YYYY</p>
-            <p class="experience__location">Location XXX, COUNTRY</p>
+            <p class="experience__date">June 2022 -- August 2022</p>
+            <p class="experience__location">
+              QSI International School of Bratislava, Slovakia
+            </p>
           </div>
           <div id="experience-tile">
-            <h3 class="experience__header">Summer Camp Music Teacher</h3>
+            <img
+              src="/assets/img/tutorimg.jpg"
+              alt="Experience Logo"
+              class="experience__img"
+            />
+            <h3 class="experience__header">
+              Private English and German Language Tutor
+            </h3>
             <p class="experience__date">Month YYYY -- Month YYYY</p>
-            <p class="experience__location">Location XXX, COUNTRY</p>
+            <p class="experience__location">Self-Employed, Ukraine</p>
           </div>
         </div>
+        <a class="cv-button" href="assets/files/cv.pdf" download="cv.pdf">
+          Get My CV
+        </a>
       </section>
     </main>
 
