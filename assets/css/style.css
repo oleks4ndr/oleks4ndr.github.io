@@ -166,7 +166,7 @@ h2 {
   /* background-color: orange; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   flex-direction: row;
   position: fixed;
   height: 15%;
@@ -176,10 +176,10 @@ h2 {
 }
 
 .header__logo {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   background-color: var(--DARK-BEIGE);
-  border-radius: 10%;
+  border-radius: 50%;
 }
 
 /* .header__nav {
@@ -188,17 +188,132 @@ h2 {
 
 .nav__list {
   display: flex;
-  gap: 20px;
   justify-content: space-evenly;
   padding: var(--PADDING);
 }
 
 .nav__list li {
-  display: block;
+  margin: 0 var(--PADDING);
+  padding: 7px;
   float: left;
-  max-width: 50px;
+  max-width: 70px;
   overflow: hidden;
+  max-height: 70px;
+  background-color: var(--LIGHT-BEIGE);
+  border-radius: 50%;
+  display: flex; /* Center content vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures the image doesn't spill out */
+}
+.nav__list img {
   max-height: 50px;
+  max-width: 50px;
+  object-fit: contain;
+}
+
+/* Hamburger Menu */
+
+label .menu {
+  position: absolute;
+  margin: var(--PADDING);
+  right: 0;
+  top: 0;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  background: var(--LIGHT-BEIGE);
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 var(--MID-BEIGE), 0 0 0 0 var(--MID-BEIGE);
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  top: 35px;
+  right: 18px;
+  width: 35px;
+  height: 3px;
+  background: var(--RED-ACCENT);
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--RED-ACCENT);
+}
+
+label .hamburger:before {
+  top: -10px;
+}
+
+label .hamburger:after {
+  bottom: -10px;
+}
+
+label input {
+  display: none;
+}
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 15vw var(--MID-BEIGE), 0 0 0 50vh var(--MID-BEIGE);
+  border-radius: 10px;
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+label input:checked + .menu + ul {
+  opacity: 1;
+}
+
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 15rem;
+  right: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.25s 0s ease-in-out;
+  transition: 0.25s 0s ease-in-out;
+}
+
+label a {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  color: var(--RED-ACCENT);
+  text-decoration: none;
 }
 
 /* || MAIN SECTIONS */
@@ -253,11 +368,16 @@ h2 {
   margin: var(--SECTION-MARGIN);
 }
 
-.home__header2 {
+.home__header2,
+.home__header2-loc {
   font-weight: normal;
   text-align: right;
   font-size: 2rem;
   margin: var(--SECTION-MARGIN);
+}
+
+.home__header2-loc {
+  color: var(--MID-BEIGE);
 }
 
 .name {
@@ -275,6 +395,15 @@ h2 {
   height: 65vh;
   width: 3px;
   background-color: var(--RED-ACCENT);
+  display: none;
+}
+
+.line-img {
+  position: absolute;
+  margin: var(--SECTION-MARGIN);
+  left: 0;
+  top: 70%;
+  height: 80vh;
 }
 
 /* vertical wavy line, maybe will incorporate */
@@ -432,7 +561,8 @@ h2 {
     font-size: 5rem;
     text-align: center;
   }
-  .home__header2 {
+  .home__header2,
+  .home__header2-loc {
     font-size: 1.8rem;
     text-align: center;
   }
@@ -470,7 +600,8 @@ h2 {
     font-size: 3.5rem;
     text-align: center;
   }
-  .home__header2 {
+  .home__header2,
+  .home__header2-loc {
     font-size: 1.2rem;
     text-align: center;
   }
