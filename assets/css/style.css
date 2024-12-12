@@ -605,7 +605,7 @@ label input:checked + .menu + ul a {
 .about__container {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
 }
