@@ -50,12 +50,27 @@
           </li>
         </ul>
       </nav>
+      <label>
+        <input type="checkbox" />
+        <span class="menu"> <span class="hamburger"></span> </span>
+        <ul class="hamburger-list">
+          <li><a href="/">Home.</a></li>
+          <li><a href="#projects">Projects.</a></li>
+          <li><a href="#experience">Experience.</a></li>
+          <li><a href="#about">About.</a></li>
+          <li><a href="/contact.html">Contact.</a></li>
+        </ul>
+      </label>
     </header>
 
     <main class="main">
       <section class="main__contact">
         <h1 class="contact__header">Contact Me</h1>
-        <form action="process_contact.php" method="POST" class="contact__form">
+        <form
+          action="https://formspree.io/f/meoqwvvw"
+          method="POST"
+          class="contact__form"
+        >
           <div class="form__group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />

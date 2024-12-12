@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $recipient = "oa2302@nyu.edu";
+    // $recipient = "";
     $subject = "New contact from $name";
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n\n";
