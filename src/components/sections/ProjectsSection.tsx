@@ -1,5 +1,7 @@
 export default function ProjectsSection() {
     return (
-        <div>Projects Section</div>
+        <section id="projects" className="border border-solid border-green-600">
+            Projects Section
+        </section>
     );
 }
