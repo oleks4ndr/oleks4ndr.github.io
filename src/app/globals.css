@@ -19,14 +19,40 @@
   }
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+} */
+html {
+  scroll-behavior: smooth;
 }
 
-/* * {
-	border: 1px dashed #fff;
-} */
+section {
+  min-height: 100svh;
+}
+
+/* Only snap on lg */
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  section {
+    min-height: 100svh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+/* no snap on sm */
+@media (max-width: 1023px) {
+  html {
+    scroll-snap-type: none;
+  }
+  section {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+}
 
 body {
   background: var(--background);
@@ -45,8 +71,8 @@ body {
     sans-serif;
 }
 
-section {
+/* section {
   min-height: 100svh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-}
+} */

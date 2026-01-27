@@ -7,8 +7,8 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col lg:flex-row">
-      <Navbar className="order-1 lg:sticky lg:top-0 lg:order-2 lg:h-screen lg:w-72 lg:shrink-0" />
-      <div className="order-2 min-w-0 flex-1 lg:order-1">
+      <Navbar className="fixed top-0 z-50 order-1 w-full lg:sticky lg:top-0 lg:order-2 lg:h-screen lg:w-72 lg:shrink-0" />
+      <div className="order-2 min-w-0 flex-1 pt-14 lg:order-1 lg:pt-0">
         <HeroSection />
         <ProjectsSection />
         <ExperienceSection />
