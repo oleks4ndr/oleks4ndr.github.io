@@ -18,7 +18,7 @@ export default function SocialLink({ href, className, icon, label, size }: Socia
 
   return (
     <a className={className} href={href} target="_blank">
-      {icon && <Image src={icon} alt={label ?? ""} height={sizePx} width={sizePx} />}
+      {icon && <Image src={icon} alt={label ?? ""} height={sizePx} />}
     </a>
   );
 }
