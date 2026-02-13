@@ -3,9 +3,292 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>V</title>
+    <title>💝</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 100%);
+        overflow-x: hidden;
+      }
+
+      .message {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: #d63384;
+        text-align: center;
+        padding: 2rem;
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .question-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .question {
+        font-size: 2.5rem;
+        color: #d63384;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .buttons-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        height: 200px;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 1.5rem 3rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      #yesBtn {
+        background: #ff69b4;
+        color: white;
+        position: relative;
+        z-index: 10;
+      }
+
+      #yesBtn:hover {
+        background: #ff1493;
+        transform: scale(1.05);
+      }
+
+      #noBtn {
+        background: #f0f0f0;
+        color: #666;
+        position: relative;
+      }
+
+      .grow-animation {
+        animation: growButton 5s ease-in-out forwards;
+      }
+
+      .slide-animation {
+        animation: slideAway 6s cubic-bezier(0.1, 0, 0.9, 1) forwards;
+      }
+
+      @keyframes growButton {
+        to {
+          transform: scale(1.8);
+        }
+      }
+
+      @keyframes slideAway {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        30% {
+          transform: translateX(50px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(200vw);
+          opacity: 0;
+        }
+      }
+
+      .falling {
+        animation: fall 1.5s ease-in forwards !important;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(200vh) rotate(180deg);
+          opacity: 0;
+        }
+      }
+
+      .celebration {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 1000;
+        flex-direction: column;
+      }
+
+      .celebration.show {
+        display: flex;
+      }
+
+      .celebration-text {
+        font-size: 4rem;
+        color: #ff1493;
+        animation: pulse 1s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      .hearts {
+        position: fixed;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+      }
+
+      .heart {
+        position: absolute;
+        font-size: 2rem;
+        animation: floatUp 4s ease-in infinite;
+        opacity: 0;
+      }
+
+      @keyframes floatUp {
+        0% {
+          opacity: 0;
+          transform: translateY(100vh) rotate(0deg);
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-100vh) rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
-    test
+    <div class="message">hello bab :)</div>
+
+    <div class="message">so...</div>
+
+    <div class="message">i've been thinking...</div>
+
+    <div class="message">about us</div>
+
+    <div class="message">and how special you are</div>
+
+    <div class="message">you make every day brighter</div>
+
+    <div class="message">and i have a question...</div>
+
+    <div class="question-container" id="questionSection">
+      <div class="question">Will you be my valentine? ♥️</div>
+      <div class="buttons-container">
+        <button id="yesBtn" class="btn">Yes!</button>
+        <button id="noBtn" class="btn">No</button>
+      </div>
+    </div>
+
+    <div class="celebration" id="celebration">
+      <div class="celebration-text">Yippieee 😜😜</div>
+      <div style="font-size: 1.5rem; color: #d63384; margin-top: 2rem">good choice 😈</div>
+    </div>
+
+    <div class="hearts" id="hearts"></div>
+
+    <script>
+      const yesBtn = document.getElementById("yesBtn");
+      const noBtn = document.getElementById("noBtn");
+      const questionSection = document.getElementById("questionSection");
+      const celebration = document.getElementById("celebration");
+      const heartsContainer = document.getElementById("hearts");
+
+      // Observe when the question section is in view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Start animations when form is in view
+              setTimeout(() => {
+                yesBtn.classList.add("grow-animation");
+                noBtn.classList.add("slide-animation");
+              }, 500);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+
+      observer.observe(questionSection);
+
+      // Yes button click
+      yesBtn.addEventListener("click", () => {
+        celebration.classList.add("show");
+        createHearts();
+      });
+
+      // No button behavior - falls when clicked
+      noBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        noBtn.classList.remove("slide-animation");
+        noBtn.classList.add("falling");
+      });
+
+      // Create floating hearts animation
+      function createHearts() {
+        for (let i = 0; i < 30; i++) {
+          setTimeout(() => {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.textContent = "💕";
+            heart.style.left = Math.random() * 100 + "%";
+            heart.style.animationDelay = Math.random() * 2 + "s";
+            heartsContainer.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 4000);
+          }, i * 100);
+        }
+      }
+    </script>
   </body>
 </html>
